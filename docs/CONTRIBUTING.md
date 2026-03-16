@@ -10,11 +10,11 @@ Thank you for your interest in contributing! This document provides guidelines f
 4. Create a feature branch
 
 ```bash
-git clone https://github.com/yourusername/edge-sbc-reliability-lab.git
-cd edge-sbc-reliability-lab
+git clone https://github.com/manunicholasjacob/Edge-sbc-reliability-lab.git
+cd Edge-sbc-reliability-lab
 python3 -m venv venv
 source venv/bin/activate
-pip install -e ".[dev]"
+pip install -e .
 git checkout -b feature/your-feature-name
 ```
 
@@ -104,4 +104,4 @@ Feature requests are welcome! Please:
 
 ## Questions?
 
-Open an issue with the "question" label or reach out to maintainers.
+Open an issue with the "question" label or contact the maintainer at manunicholasjacob@gmail.com.

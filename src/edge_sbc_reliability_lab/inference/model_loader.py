@@ -219,25 +219,24 @@ def create_dummy_tflite_model(
     return output_path
 
 
-def download_sample_model(
-    model_name: str,
-    output_dir: str = "models",
-    runtime: str = "onnx",
-) -> Optional[str]:
+def download_sample_model(output_path: str, model_name: str = "mobilenetv2") -> str:
     """
     Download a sample model for testing.
     
-    This is a placeholder - in production, this would download from
-    a model zoo or create appropriate test models.
+    Note: This function requires manual model acquisition. Download models from:
+    - ONNX Model Zoo: https://github.com/onnx/models
+    - TensorFlow Hub: https://tfhub.dev/
+    - Hugging Face: https://huggingface.co/models
     
     Args:
+        output_path: Path to save the model
         model_name: Name of model to download
-        output_dir: Directory to save model
-        runtime: Target runtime
         
     Returns:
-        Path to downloaded model, or None if not available
+        Path to downloaded model
     """
-    # For now, return None - models should be provided by user
-    # or created with create_dummy_* functions
+    raise NotImplementedError(
+        "Automatic model download not implemented. "
+        "Please manually download models from ONNX Model Zoo or TensorFlow Hub."
+    )
     return None

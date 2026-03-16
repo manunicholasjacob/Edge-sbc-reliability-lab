@@ -4,6 +4,8 @@
 
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Raspberry Pi 5](https://img.shields.io/badge/Raspberry%20Pi-5-C51A4A.svg)](https://www.raspberrypi.com/products/raspberry-pi-5/)
+[![ORCID](https://img.shields.io/badge/ORCID-0009--0007--6589--6572-green.svg)](https://orcid.org/0009-0007-6589-6572)
 
 ## Overview
 
@@ -270,8 +272,12 @@ If you use this framework in research, please cite:
 
 MIT License - see [LICENSE](LICENSE) for details.
 
+## About the Author
+
+**Manu Nicholas Jacob** is a hardware engineer at Dell Technologies in Austin, TX, specializing in edge computing and SBC-based AI deployment. This project emerged from research into real-world reliability characteristics of AI inference on resource-constrained edge devices.
+
 ## Acknowledgments
 
-- Raspberry Pi Foundation for the excellent Pi 5 hardware
-- ONNX Runtime, TensorFlow, and PyTorch teams for inference runtimes
-- The edge AI research community for methodology insights
+- Raspberry Pi Foundation for the excellent Pi 5 hardware platform
+- ONNX Runtime, TensorFlow, and PyTorch teams for robust inference runtimes
+- The edge AI and embedded systems research community
