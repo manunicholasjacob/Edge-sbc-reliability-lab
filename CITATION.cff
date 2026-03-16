@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use this software in your research, please cite it as below."
+type: software
+title: "Edge SBC Reliability Lab"
+abstract: >-
+  A reproducible benchmarking and reliability framework for AI inference
+  on Raspberry Pi 5 and similar single-board computers. Measures latency
+  distributions, thermal drift, sustained performance, and power-aware
+  behavior under realistic edge deployment conditions.
+authors:
+  - family-names: "Jacob"
+    given-names: "Manu Nicholas"
+    email: "manunicholasjacob@gmail.com"
+    affiliation: "Independent Researcher, Hardware Engineer at Dell Technologies"
+    orcid: "https://orcid.org/0009-0007-6589-6572"
+version: "1.0.0"
+date-released: "2024-03-16"
+license: MIT
+repository-code: "https://github.com/manunicholasjacob/Edge-sbc-reliability-lab"
+url: "https://github.com/manunicholasjacob/Edge-sbc-reliability-lab"
+keywords:
+  - raspberry-pi
+  - edge-computing
+  - ai-inference
+  - benchmarking
+  - thermal-analysis
+  - reliability
+  - onnx-runtime
+  - tensorflow-lite
+  - reproducibility

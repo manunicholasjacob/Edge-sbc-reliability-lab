@@ -1,0 +1,21 @@
+# Edge SBC Reliability Lab - Requirements
+# Core dependencies for Raspberry Pi 5 benchmarking
+
+# Core utilities
+numpy>=1.21.0
+pandas>=1.3.0
+pyyaml>=6.0
+psutil>=5.8.0
+matplotlib>=3.5.0
+
+# Runtime dependencies (install based on your needs)
+# Uncomment the runtimes you want to use:
+
+# ONNX Runtime (recommended - best Pi 5 support)
+onnxruntime>=1.10.0
+
+# TensorFlow Lite Runtime
+tflite-runtime>=2.10.0
+
+# PyTorch CPU (larger install, optional)
+# torch>=2.0.0

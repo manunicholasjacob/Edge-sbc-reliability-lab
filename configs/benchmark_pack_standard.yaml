@@ -1,0 +1,70 @@
+# Standard Benchmark Pack Configuration
+# Raspberry Pi 5 - Complete benchmark suite (~55 minutes)
+
+name: "pi5_standard_pack"
+description: "Standard Raspberry Pi 5 benchmark pack for comprehensive evaluation"
+
+# Model to benchmark (override with --model)
+default_model_path: "models/mobilenetv2.onnx"
+
+# Cooldown settings
+cooldown_between_sec: 60
+cooldown_target_temp_c: 50
+
+# Benchmark sequence
+benchmarks:
+  # Phase 1: Burst benchmarks (quick performance snapshot)
+  - name: "onnx_burst_500"
+    runtime: "onnx"
+    warmup_runs: 20
+    measured_runs: 500
+    sustained_duration_sec: 0
+    threads: 4
+    description: "ONNX Runtime burst benchmark - 500 iterations"
+
+  - name: "tflite_burst_500"
+    runtime: "tflite"
+    warmup_runs: 20
+    measured_runs: 500
+    sustained_duration_sec: 0
+    threads: 4
+    description: "TFLite burst benchmark - 500 iterations"
+
+  # Phase 2: Short sustained tests (thermal warmup)
+  - name: "onnx_sustained_5min"
+    runtime: "onnx"
+    warmup_runs: 20
+    measured_runs: 0
+    sustained_duration_sec: 300
+    threads: 4
+    description: "ONNX Runtime 5-minute sustained test"
+
+  - name: "tflite_sustained_5min"
+    runtime: "tflite"
+    warmup_runs: 20
+    measured_runs: 0
+    sustained_duration_sec: 300
+    threads: 4
+    description: "TFLite 5-minute sustained test"
+
+  # Phase 3: Long sustained test (thermal drift analysis)
+  - name: "onnx_sustained_15min"
+    runtime: "onnx"
+    warmup_runs: 20
+    measured_runs: 0
+    sustained_duration_sec: 900
+    threads: 4
+    description: "ONNX Runtime 15-minute sustained test for thermal drift"
+
+  # Phase 4: Thermal stress test
+  - name: "thermal_stress_10min"
+    runtime: "onnx"
+    warmup_runs: 10
+    measured_runs: 0
+    sustained_duration_sec: 600
+    threads: 4
+    inter_inference_delay_ms: 0
+    description: "10-minute thermal stress test"
+
+# Estimated total runtime: ~55 minutes (including cooldowns)
+total_estimated_minutes: 55

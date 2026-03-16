@@ -1,0 +1,33 @@
+# TensorFlow Lite Burst Benchmark Configuration
+# Raspberry Pi 5 - Quick performance test
+
+experiment_name: "pi5_tflite_burst"
+model_name: "mobilenetv2"
+model_path: "models/mobilenetv2.tflite"
+runtime: "tflite"
+
+# Benchmark parameters
+warmup_runs: 20
+measured_runs: 500
+sustained_duration_sec: 0
+batch_size: 1
+threads: 4
+
+# Input configuration (TFLite typically uses NHWC)
+# input_shape: [1, 224, 224, 3]
+# input_dtype: "float32"
+
+# Telemetry
+collect_temperature: true
+collect_frequency: true
+thermal_sample_interval_sec: 1.0
+
+# Output
+output_dir: "results"
+save_raw_latencies: true
+save_thermal_trace: true
+generate_plots: true
+
+# Notes
+cooling_setup_note: "Passive heatsink, no fan"
+ambient_note: "Room temperature ~22°C"

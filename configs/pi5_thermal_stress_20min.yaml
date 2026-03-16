@@ -1,0 +1,32 @@
+# Thermal Stress Test Configuration
+# Raspberry Pi 5 - 20-minute sustained load for thermal analysis
+
+experiment_name: "pi5_thermal_stress_20min"
+model_name: "mobilenetv2"
+model_path: "models/mobilenetv2.onnx"
+runtime: "onnx"
+
+# Benchmark parameters - continuous load for thermal stress
+warmup_runs: 10
+measured_runs: 0
+sustained_duration_sec: 1200  # 20 minutes
+batch_size: 1
+threads: 4
+
+# No delay between inferences for maximum thermal stress
+inter_inference_delay_ms: 0
+
+# Telemetry - frequent sampling for thermal analysis
+collect_temperature: true
+collect_frequency: true
+thermal_sample_interval_sec: 0.5  # Sample every 500ms
+
+# Output
+output_dir: "results"
+save_raw_latencies: true
+save_thermal_trace: true
+generate_plots: true
+
+# Notes
+cooling_setup_note: "Passive heatsink, no fan"
+ambient_note: "Room temperature ~22°C"
